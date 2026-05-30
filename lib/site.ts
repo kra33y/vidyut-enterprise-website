@@ -22,9 +22,9 @@ export const site = {
   description:
     "Manufacturer, supplier, stockist, distributor and contractor for industrial electrical products, earthing systems, lightning protection and electrical infrastructure solutions in India.",
   url: "https://www.vidyutenterprise.in",
-  phone: "+91 89125 60000",
-  whatsapp: "918912560000",
-  email: "sales@vidyutenterprise.in",
+  phone: "+917675873689",
+  whatsapp: "+917675873689",
+  email: "vidyute@yahoo.com",
   address:
     "31-33-102/C, Sri Vishnu Plaza, Ground Floor, Opposite Leela Mahal Theater, Dabagardens, Visakhapatnam - 530020",
   gst: "37ADDPM8016E1ZP",
