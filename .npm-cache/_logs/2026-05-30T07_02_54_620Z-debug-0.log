@@ -1,0 +1,34 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.13.0
+2 info using node@v24.16.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\ssrmi\Documents\Codex\2026-05-30\can-you-create-a-website-for\outputs\vidyut-enterprise-website\.npmrc
+5 silly config load:file:C:\Users\ssrmi\.npmrc
+6 silly config load:file:C:\Users\ssrmi\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install" "--cache" ".\\.npm-cache"
+9 verbose logfile logs-max:10 dir:C:\Users\ssrmi\Documents\Codex\2026-05-30\can-you-create-a-website-for\outputs\vidyut-enterprise-website\.npm-cache\_logs\2026-05-30T07_02_54_620Z-
+10 verbose logfile C:\Users\ssrmi\Documents\Codex\2026-05-30\can-you-create-a-website-for\outputs\vidyut-enterprise-website\.npm-cache\_logs\2026-05-30T07_02_54_620Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+13 verbose stack Error: Override for postcss@^8.5.0 conflicts with direct dependency
+13 verbose stack     at Node.assertRootOverrides (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\node.js:1398:29)
+13 verbose stack     at #loadActual (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\load-actual.js:120:24)
+13 verbose stack     at async Promise.all (index 0)
+13 verbose stack     at async Arborist.reify (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\reify.js:111:5)
+13 verbose stack     at async Install.exec (C:\Program Files\nodejs\node_modules\npm\lib\commands\install.js:146:5)
+13 verbose stack     at async Npm.exec (C:\Program Files\nodejs\node_modules\npm\lib\npm.js:193:9)
+13 verbose stack     at async module.exports (C:\Program Files\nodejs\node_modules\npm\lib\cli\entry.js:67:5)
+14 error code EOVERRIDE
+15 error Override for postcss@^8.5.0 conflicts with direct dependency
+16 silly unfinished npm timer reify 1780124575200
+17 silly unfinished npm timer reify:loadTrees 1780124575203
+18 silly unfinished npm timer idealTree 1780124575204
+19 silly unfinished npm timer idealTree:init 1780124575204
+20 verbose cwd C:\Users\ssrmi\Documents\Codex\2026-05-30\can-you-create-a-website-for\outputs\vidyut-enterprise-website
+21 verbose os Windows_NT 10.0.26220
+22 verbose node v24.16.0
+23 verbose npm  v11.13.0
+24 verbose exit 1
+25 verbose code 1
+26 error A complete log of this run can be found in: C:\Users\ssrmi\Documents\Codex\2026-05-30\can-you-create-a-website-for\outputs\vidyut-enterprise-website\.npm-cache\_logs\2026-05-30T07_02_54_620Z-debug-0.log

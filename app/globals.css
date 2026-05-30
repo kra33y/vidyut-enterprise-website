@@ -1,0 +1,623 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #06244a;
+  --navy-2: #0a315f;
+  --electric: #0a66d8;
+  --green: #0b6b35;
+  --copper: #c97238;
+  --ink: #111827;
+  --muted: #5b6778;
+  --line: #d9e2ec;
+  --steel: #f3f6f9;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.top-strip {
+  background: var(--navy);
+  color: #dbeafe;
+  font-size: 13px;
+}
+
+.top-strip .container,
+.nav-inner,
+.hero-grid,
+.section-head,
+.footer-grid,
+.contact-grid,
+.quote-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(16px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 220px;
+  font-weight: 900;
+  color: var(--navy);
+  letter-spacing: 0.02em;
+}
+
+.brand-mark {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: #263244;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.nav-links a:hover,
+.footer a:hover {
+  color: var(--electric);
+}
+
+.button,
+.button-secondary,
+.button-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-weight: 800;
+  border: 1px solid transparent;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.button {
+  background: var(--electric);
+  color: white;
+  box-shadow: 0 12px 28px rgba(10, 102, 216, 0.24);
+}
+
+.button:hover,
+.button-secondary:hover,
+.button-light:hover {
+  transform: translateY(-2px);
+}
+
+.button-secondary {
+  background: white;
+  color: var(--navy);
+  border-color: var(--line);
+}
+
+.button-light {
+  background: rgba(255,255,255,0.12);
+  color: white;
+  border-color: rgba(255,255,255,0.22);
+}
+
+.hero {
+  min-height: 680px;
+  display: flex;
+  align-items: center;
+  color: white;
+  background:
+    linear-gradient(105deg, rgba(6,36,74,0.96) 0%, rgba(6,36,74,0.88) 46%, rgba(6,36,74,0.42) 100%),
+    url("/images/products/chemical-earthing-electrode.png") center right / contain no-repeat,
+    linear-gradient(135deg, #06244a, #0b4e91);
+}
+
+.hero-grid {
+  align-items: center;
+}
+
+.hero-copy {
+  max-width: 700px;
+  padding: 90px 0 80px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #bfdbfe;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 12px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: inherit;
+  letter-spacing: 0;
+}
+
+h1 {
+  margin-top: 18px;
+  max-width: 760px;
+  font-size: clamp(40px, 7vw, 82px);
+  line-height: 0.98;
+}
+
+.hero p,
+.lead {
+  color: #dbe6f3;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.hero-actions,
+.card-actions,
+.download-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 42px;
+}
+
+.metric {
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.08);
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.metric strong {
+  display: block;
+  font-size: 28px;
+}
+
+.section {
+  padding: 78px 0;
+}
+
+.section.alt {
+  background: var(--steel);
+}
+
+.section.dark {
+  background: var(--navy);
+  color: white;
+}
+
+.section-head {
+  align-items: flex-end;
+  margin-bottom: 34px;
+}
+
+.section-title {
+  font-size: clamp(28px, 4vw, 46px);
+  color: var(--navy);
+  line-height: 1.08;
+}
+
+.dark .section-title {
+  color: white;
+}
+
+.section-kicker {
+  color: var(--electric);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.section-copy {
+  color: var(--muted);
+  max-width: 650px;
+  line-height: 1.7;
+}
+
+.dark .section-copy,
+.dark .lead {
+  color: #dbeafe;
+}
+
+.grid {
+  display: grid;
+  gap: 18px;
+}
+
+.grid.two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid.three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid.four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 16px 46px rgba(15, 23, 42, 0.06);
+}
+
+.card-pad {
+  padding: 24px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.product-image {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: #f8fafc;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 260ms ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.04);
+}
+
+.tag {
+  display: inline-flex;
+  width: fit-content;
+  border-radius: 999px;
+  background: #eaf2ff;
+  color: var(--navy);
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.feature-list {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #334155;
+  line-height: 1.55;
+}
+
+.icon-box {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  color: white;
+  background: var(--navy);
+  flex: 0 0 auto;
+}
+
+.category-nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+}
+
+.category-nav a {
+  border: 1px solid var(--line);
+  background: white;
+  color: var(--navy);
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-weight: 800;
+}
+
+.category-nav a:hover {
+  border-color: var(--electric);
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.spec-table th,
+.spec-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+
+.spec-table th {
+  color: var(--navy);
+  width: 42%;
+}
+
+.industry-card {
+  min-height: 176px;
+  background: linear-gradient(160deg, #ffffff, #eef6ff);
+}
+
+.download-panel {
+  background: linear-gradient(120deg, var(--navy), #0b4e91);
+  color: white;
+  border-radius: 8px;
+  padding: 36px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 26px;
+  align-items: center;
+}
+
+.form {
+  display: grid;
+  gap: 14px;
+}
+
+.form-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 13px 14px;
+  font: inherit;
+  color: var(--ink);
+  background: white;
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.footer {
+  background: #061b36;
+  color: #dbeafe;
+  padding: 56px 0 24px;
+}
+
+.footer-grid {
+  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1.3fr 0.8fr 0.8fr 1fr;
+}
+
+.contact-grid,
+.quote-grid {
+  align-items: flex-start;
+  display: grid;
+}
+
+.contact-grid {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+.quote-grid {
+  grid-template-columns: 1fr 1.2fr;
+}
+
+.footer h3,
+.footer h4 {
+  color: white;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+  display: grid;
+  gap: 10px;
+}
+
+.floating-whatsapp,
+.sticky-enquiry {
+  position: fixed;
+  z-index: 60;
+  right: 18px;
+  border-radius: 999px;
+  box-shadow: 0 16px 40px rgba(2, 8, 23, 0.18);
+}
+
+.floating-whatsapp {
+  bottom: 88px;
+  width: 56px;
+  height: 56px;
+  background: #16a34a;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.sticky-enquiry {
+  bottom: 20px;
+}
+
+.breadcrumb {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.page-hero {
+  padding: 72px 0;
+  color: white;
+  background: linear-gradient(120deg, var(--navy), #0a4d8f);
+}
+
+.page-hero h1 {
+  font-size: clamp(34px, 5vw, 60px);
+}
+
+.map-placeholder {
+  min-height: 340px;
+  background:
+    linear-gradient(rgba(6,36,74,0.82), rgba(6,36,74,0.82)),
+    radial-gradient(circle at 30% 30%, #93c5fd 0 3px, transparent 4px),
+    radial-gradient(circle at 70% 60%, #22c55e 0 4px, transparent 5px),
+    #0f2d50;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+
+@media (max-width: 980px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    min-height: auto;
+    background:
+      linear-gradient(180deg, rgba(6,36,74,0.98), rgba(6,36,74,0.78)),
+      url("/images/products/chemical-earthing-electrode.png") bottom right / 78% no-repeat,
+      #06244a;
+  }
+
+  .hero-copy {
+    padding-bottom: 260px;
+  }
+
+  .grid.three,
+  .grid.four,
+  .footer-grid,
+  .download-panel,
+  .contact-grid,
+  .quote-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: min(100% - 22px, 1180px);
+  }
+
+  .top-strip {
+    display: none;
+  }
+
+  .brand {
+    min-width: auto;
+  }
+
+  .brand span {
+    font-size: 14px;
+  }
+
+  .nav-inner {
+    min-height: 70px;
+  }
+
+  .section {
+    padding: 54px 0;
+  }
+
+  .section-head,
+  .hero-grid,
+  .top-strip .container {
+    display: block;
+  }
+
+  .grid.two,
+  .form-grid,
+  .metric-row {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    padding: 58px 0 250px;
+  }
+
+  .footer-grid {
+    gap: 28px;
+  }
+}
