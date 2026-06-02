@@ -198,6 +198,45 @@ export default function HomePage() {
 
       <section className="section">
         <div className="container grid two">
+          <section className="section">
+  <div className="container">
+    <div className="section-heading">
+      <h2>Customer Reviews</h2>
+      <p>
+        Trusted by industries, contractors and businesses across India.
+      </p>
+    </div>
+
+    <div className="card" style={{ textAlign: "center", padding: "32px" }}>
+      <h3>⭐⭐⭐⭐⭐ Rated on Google</h3>
+
+      <p>
+        See what our customers say about Vidyut Enterprise and share your experience.
+      </p>
+
+      <div style={{ marginTop: "20px" }}>
+        <a
+          href="https://g.page/r/CVh69S0mATSAEAI/review"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="button"
+        >
+          View & Write Google Reviews
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<div style={{ marginTop: "12px" }}>
+  <a
+    href="https://maps.app.goo.gl/B3FojcwWowp2v9Dz6"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="button"
+  >
+    Open Location in Google Maps
+  </a>
+</div>
           <div>
             <div className="section-kicker">Location</div>
             <h2 className="section-title">Visit or contact Vidyut Enterprise</h2>
