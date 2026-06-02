@@ -208,7 +208,6 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="map-placeholder">
-<<<<<<< HEAD
   <iframe
     src="https://maps.google.com/maps?q=31-33-102/C,%20Sri%20Vishnu%20Plaza,%20Opp.%20Leela%20Mahal%20Theater,%20Dabagardens,%20Visakhapatnam&t=&z=15&ie=UTF8&iwloc=&output=embed"
     width="100%"
@@ -218,14 +217,6 @@ export default function HomePage() {
     allowFullScreen
   />
 </div>
-=======
-            <div>
-              <Building2 size={44} />
-              <h3>Google Maps Placeholder</h3>
-              <p>Embed the live Google Map here when the Maps URL is available.</p>
-            </div>
->>>>>>> 765fead6beac4493dd4f473e7c5bf168c1d24932
-          </div>
         </div>
       </section>
     </main>
