@@ -45,9 +45,14 @@ export default function ContactPage() {
 >
   <div className="map-placeholder" style={{ marginTop: 18 }}>
     <div>
-      <MapPin size={42} />
-      <h3>Vidyut Enterprise, Visakhapatnam</h3>
-      <p>{site.address}</p>
+      <iframe
+  src="https://maps.google.com/maps?q=31-33-102/C,%20Sri%20Vishnu%20Plaza,%20Opp.%20Leela%20Mahal%20Theater,%20Dabagardens,%20Visakhapatnam&t=&z=15&ie=UTF8&iwloc=&output=embed"
+  width="100%"
+  height="350"
+  style={{ border: 0, borderRadius: "12px" }}
+  loading="lazy"
+  allowFullScreen
+/>
     </div>
   </div>
 </a>
