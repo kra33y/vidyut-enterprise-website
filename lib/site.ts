@@ -23,7 +23,7 @@ export const site = {
     "Manufacturer, supplier, stockist, distributor and contractor for industrial electrical products, earthing systems, lightning protection and electrical infrastructure solutions in India.",
   url: "https://www.vidyutenterprise.in",
 
-  phone: "+917675873689",
+  phone: "+917675873689, +919959412942",
   whatsapp: "+917675873689",
   email: "vidyute@yahoo.com",
 
