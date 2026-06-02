@@ -2,7 +2,7 @@ import { Send } from "lucide-react";
 
 export function LeadForm({ type = "contact" }: { type?: "contact" | "quote" | "product" }) {
   return (
-    <form className="form" action={`mailto:sales@vidyutenterprise.in?subject=${encodeURIComponent(type)} enquiry`} method="post">
+    <form className="form" action={`mailto:vidyute@yahoo.com?subject=${encodeURIComponent(type)} enquiry`} method="post">
       <div className="form-grid">
         <input name="name" placeholder="Your name" required />
         <input name="company" placeholder="Company name" />
