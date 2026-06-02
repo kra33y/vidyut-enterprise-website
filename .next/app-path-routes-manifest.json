@@ -3,15 +3,15 @@
   "/sitemap.xml/route": "/sitemap.xml",
   "/_not-found/page": "/_not-found",
   "/page": "/",
-  "/blog/page": "/blog",
+  "/contact/page": "/contact",
   "/about/page": "/about",
   "/downloads/page": "/downloads",
-  "/contact/page": "/contact",
-  "/gallery/page": "/gallery",
+  "/blog/page": "/blog",
   "/industries/page": "/industries",
   "/products/page": "/products",
+  "/gallery/page": "/gallery",
   "/projects/page": "/projects",
-  "/products/[slug]/page": "/products/[slug]",
   "/home/page": "/home",
-  "/request-quote/page": "/request-quote"
+  "/request-quote/page": "/request-quote",
+  "/products/[slug]/page": "/products/[slug]"
 }

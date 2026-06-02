@@ -1,4 +1,4 @@
-// File: C:\Users\ssrmi\Documents\Codex\2026-05-30\can-you-create-a-website-for\outputs\vidyut-enterprise-website\app\contact\page.tsx
+// File: C:\Users\ssrmi\Desktop\vidyut-enterprise-website\app\contact\page.tsx
 import * as entry from '../../../../app/contact/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
