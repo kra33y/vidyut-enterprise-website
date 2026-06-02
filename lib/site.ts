@@ -21,7 +21,7 @@ export const site = {
   tagline: "Electrical & Earthing Solutions for Industries",
   description:
     "Manufacturer, supplier, stockist, distributor and contractor for industrial electrical products, earthing systems, lightning protection and electrical infrastructure solutions in India.",
-  url: "https://www.vidyutenterprise.in",
+  url: "https://vidyutenterprise.in",
 
   phone: "+917675873689, +919959412942",
   whatsapp: "+917675873689",
