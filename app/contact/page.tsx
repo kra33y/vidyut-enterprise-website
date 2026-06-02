@@ -37,13 +37,20 @@ export default function ContactPage() {
                 );
               })}
             </div>
-            <div className="map-placeholder" style={{ marginTop: 18 }}>
-              <div>
-                <MapPin size={42} />
-                <h3>Vidyut Enterprise, Visakhapatnam</h3>
-                <p>{site.address}</p>
-              </div>
-            </div>
+            <a
+  href="https://maps.google.com/?q=31-33-102/C Sri Vishnu Plaza Opposite Leela Mahal Theater Dabagardens Visakhapatnam"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{ textDecoration: "none", color: "inherit" }}
+>
+  <div className="map-placeholder" style={{ marginTop: 18 }}>
+    <div>
+      <MapPin size={42} />
+      <h3>Vidyut Enterprise, Visakhapatnam</h3>
+      <p>{site.address}</p>
+    </div>
+  </div>
+</a>
           </div>
           <div className="card card-pad">
             <h2 style={{ color: "var(--navy)", fontSize: 34 }}>Send an enquiry</h2>
