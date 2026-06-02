@@ -2,7 +2,28 @@ import { Send } from "lucide-react";
 
 export function LeadForm({ type = "contact" }: { type?: "contact" | "quote" | "product" }) {
   return (
-    <form className="form" action={`mailto:vidyute@yahoo.com?subject=${encodeURIComponent(type)} enquiry`} method="post">
+    <form
+  className="form"
+  action="https://api.web3forms.com/submit"
+  method="POST"
+>
+  <input
+  type="hidden"
+  name="access_key"
+  value="3a720a32-fadb-41b5-a960-e832cfb0d91e"
+/>
+
+<input
+  type="hidden"
+  name="subject"
+  value={`New ${type} enquiry from Vidyut Enterprise Website`}
+/>
+
+<input
+  type="hidden"
+  name="from_name"
+  value="Vidyut Enterprise Website"
+/>
       <div className="form-grid">
         <input name="name" placeholder="Your name" required />
         <input name="company" placeholder="Company name" />
