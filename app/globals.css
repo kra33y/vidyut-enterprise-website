@@ -531,20 +531,10 @@ textarea {
 
 .map-placeholder {
   min-height: 340px;
-  background:
-    linear-gradient(rgba(6,36,74,0.82), rgba(6,36,74,0.82)),
-    radial-gradient(circle at 30% 30%, #93c5fd 0 3px, transparent 4px),
-    radial-gradient(circle at 70% 60%, #22c55e 0 4px, transparent 5px),
-    #0f2d50;
   border-radius: 8px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 24px;
+  overflow: hidden;
+  padding: 0;
 }
-
 @media (max-width: 980px) {
   .nav-links {
     display: none;

@@ -46,13 +46,24 @@ export default function ContactPage() {
   <div className="map-placeholder" style={{ marginTop: 18 }}>
     <div>
       <iframe
-  src="https://maps.google.com/maps?q=31-33-102/C,%20Sri%20Vishnu%20Plaza,%20Opp.%20Leela%20Mahal%20Theater,%20Dabagardens,%20Visakhapatnam&t=&z=15&ie=UTF8&iwloc=&output=embed"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.651168248007!2d83.29655331078334!3d17.713931493245905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a39431bf9596e33%3A0x803401262df57a58!2sVidyut%20Enterprise%20-%20Excellence%20in%20Metals%20%26%20Earthing%20Supplies%2C%20Visakhapatnam!5e0!3m2!1sen!2sin!4v1780381142556!5m2!1sen!2sin"
   width="100%"
-  height="350"
+  height="450"
   style={{ border: 0, borderRadius: "12px" }}
   loading="lazy"
   allowFullScreen
+  referrerPolicy="no-referrer-when-downgrade"
 />
+<div style={{ marginTop: "12px" }}>
+  <a
+    href="https://maps.app.goo.gl/B3FojcwWowp2v9Dz6"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="button"
+  >
+    Get Directions
+  </a>
+</div>
     </div>
   </div>
 </a>
