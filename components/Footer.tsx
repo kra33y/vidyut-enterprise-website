@@ -67,30 +67,6 @@ export function Footer() {
       <div className="container" style={{ borderTop: "1px solid rgba(255,255,255,0.12)", marginTop: 34, paddingTop: 20 }}>
         <p style={{ margin: 0, color: "#9fb3cc" }}>© 2026 Vidyut Enterprise. Industrial electrical and earthing solutions.</p>
       </div>
-      <a
-  href="https://wa.me/917675873689"
-  target="_blank"
-  rel="noopener noreferrer"
-  style={{
-    position: "fixed",
-    bottom: "20px",
-    right: "20px",
-    width: "60px",
-    height: "60px",
-    borderRadius: "50%",
-    backgroundColor: "#25D366",
-    color: "#fff",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    fontSize: "30px",
-    textDecoration: "none",
-    zIndex: 9999,
-    boxShadow: "0 4px 12px rgba(0,0,0,0.3)"
-  }}
->
-  💬
-</a>
     </footer>
   );
 }
