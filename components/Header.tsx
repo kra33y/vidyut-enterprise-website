@@ -9,12 +9,14 @@ export function Header() {
       <div className="top-strip">
         <div className="container" style={{ minHeight: 38 }}>
           <span>{site.address}</span>
-          <span>GST: {site.gst} | MSME: {site.msme}</span>
+          <span>
+            {site.phone} | {site.email}
+          </span>
         </div>
       </div>
       <header className="site-header">
         <div className="container nav-inner" style={{ minHeight: 78 }}>
-          <Link className="brand" href="/home" aria-label="Vidyut Enterprise home">
+          <Link className="brand" href="/" aria-label="Vidyut Enterprise home">
             <Image
               className="brand-mark"
               src="/images/brand/vidyut-enterprise-logo.png"

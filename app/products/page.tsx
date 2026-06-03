@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, BadgeCheck } from "lucide-react";
+import { JsonLd } from "@/components/JsonLd";
+import { ProductCard } from "@/components/ProductCard";
 import { SectionHeading } from "@/components/SectionHeading";
-import { categories, featuredProducts } from "@/lib/site";
-import { pageMetadata } from "@/lib/seo";
+import { categories, featuredProducts, productPages } from "@/lib/site";
+import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata(
   "Products",
@@ -14,6 +16,12 @@ export const metadata = pageMetadata(
 export default function ProductsPage() {
   return (
     <main>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Products", path: "/products" }
+        ])}
+      />
       <section className="page-hero">
         <div className="container">
           <div className="breadcrumb">Home / Products</div>
@@ -62,16 +70,27 @@ export default function ProductsPage() {
 
       <section className="section alt">
         <div className="container">
-          <SectionHeading kicker="Popular Enquiries" title="Featured products" />
+          <SectionHeading
+            kicker="Popular Enquiries"
+            title="Featured product pages"
+            copy="Detailed product pages for common searches and RFQ requirements."
+          />
           <div className="grid three">
             {featuredProducts.map((product) => (
-              <div className="card card-pad" key={product.title}>
-                <h3 style={{ color: "var(--navy)" }}>{product.title}</h3>
-                <p style={{ color: "var(--muted)", lineHeight: 1.65 }}>{product.description}</p>
-                <Link className="button-secondary" href={product.href}>
-                  Enquire
-                </Link>
-              </div>
+              <ProductCard key={product.title} {...product} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <SectionHeading kicker="SEO Product Pages" title="Common product requirements" />
+          <div className="category-nav">
+            {productPages.map((product) => (
+              <Link href={`/products/${product.slug}`} key={product.slug}>
+                {product.title}
+              </Link>
             ))}
           </div>
         </div>

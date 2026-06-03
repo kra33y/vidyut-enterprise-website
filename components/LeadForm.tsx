@@ -1,6 +1,6 @@
 import { Send } from "lucide-react";
 
-export function LeadForm({ type = "contact" }: { type?: "contact" | "quote" | "product" }) {
+export function LeadForm({ type = "contact" }: { type?: "contact" | "quote" | "product" | "service" }) {
   return (
     <form
   className="form"

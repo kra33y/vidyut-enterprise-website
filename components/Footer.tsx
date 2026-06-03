@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { categories, downloads, navItems, site } from "@/lib/site";
 
 export function Footer() {
@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="footer">
       <div className="container footer-grid">
         <div>
-          <Link className="brand" href="/home" style={{ color: "white" }}>
+          <Link className="brand" href="/" style={{ color: "white" }}>
             <Image
               className="brand-mark"
               src="/images/brand/vidyut-enterprise-logo.png"
@@ -20,6 +20,10 @@ export function Footer() {
           <p style={{ lineHeight: 1.7, marginTop: 16 }}>{site.description}</p>
           <p style={{ lineHeight: 1.7 }}>
             {site.address}
+            <br />
+            Phone: {site.phone}
+            <br />
+            Email: {site.email}
             <br />
             GST: {site.gst}
             <br />
@@ -64,8 +68,13 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="container" style={{ borderTop: "1px solid rgba(255,255,255,0.12)", marginTop: 34, paddingTop: 20 }}>
-        <p style={{ margin: 0, color: "#9fb3cc" }}>© 2026 Vidyut Enterprise. Industrial electrical and earthing solutions.</p>
+      <div
+        className="container"
+        style={{ borderTop: "1px solid rgba(255,255,255,0.12)", marginTop: 34, paddingTop: 20 }}
+      >
+        <p style={{ margin: 0, color: "#9fb3cc" }}>
+          &copy; 2026 Vidyut Enterprise. Industrial electrical and earthing solutions.
+        </p>
       </div>
     </footer>
   );

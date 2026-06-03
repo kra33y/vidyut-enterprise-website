@@ -1,22 +1,42 @@
-import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, BadgeCheck, Building2, Download, Factory, ShieldCheck, Zap } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, BadgeCheck, Download, Mail, MapPin, MessageCircle, Phone, ShieldCheck, Zap } from "lucide-react";
+import { JsonLd } from "@/components/JsonLd";
 import { LeadForm } from "@/components/LeadForm";
 import { ProductCard } from "@/components/ProductCard";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { categories, downloads, featuredProducts, industries, site, trustItems, whyChooseUs } from "@/lib/site";
-import { pageMetadata } from "@/lib/seo";
+import { faqJsonLd, pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata(
-  "Industrial Electrical, Earthing and Lightning Protection Supplier",
-  "Vidyut Enterprise supplies earthing electrodes, lightning arrestors, copper products, GI products and cable trays for industrial projects in India.",
-  "/home"
+  "Earthing Electrode, Lightning Arrestor & Electrical Supplier in Visakhapatnam",
+  "Vidyut Enterprise supplies earthing electrodes, lightning arrestors, copper products, GI products and cable trays for industrial projects in Visakhapatnam and across India."
 );
+
+const homeFaqs = [
+  {
+    question: "What products does Vidyut Enterprise supply?",
+    answer:
+      "Vidyut Enterprise supplies chemical earthing electrodes, copper bonded rods, lightning arrestors, copper products, GI products, cable trays, earth pit covers and earthing accessories."
+  },
+  {
+    question: "Does Vidyut Enterprise provide earthing installation services?",
+    answer:
+      "Yes. The company supports earthing installation, site guidance, testing support and lightning protection system requirements for industrial and commercial projects."
+  },
+  {
+    question: "Where is Vidyut Enterprise located?",
+    answer:
+      "Vidyut Enterprise is located at Sri Vishnu Plaza, Dabagardens, Visakhapatnam, Andhra Pradesh."
+  }
+];
 
 export default function HomePage() {
   return (
     <main>
+      <JsonLd data={faqJsonLd(homeFaqs)} />
+
       <section className="hero">
         <div className="container hero-grid">
           <div className="hero-copy">
@@ -182,7 +202,9 @@ export default function HomePage() {
           <div className="download-panel">
             <div>
               <div className="section-kicker">Catalogues</div>
-              <h2 style={{ fontSize: "clamp(28px, 4vw, 44px)" }}>Download product catalogues for your purchase team.</h2>
+              <h2 style={{ fontSize: "clamp(28px, 4vw, 44px)" }}>
+                Download product catalogues for your purchase team.
+              </h2>
               <p className="lead">Earthing and electrical catalogues are included as ready-to-download PDFs.</p>
             </div>
             <div className="grid">
@@ -197,65 +219,79 @@ export default function HomePage() {
       </section>
 
       <section className="section">
+        <div className="container">
+          <SectionHeading
+            kicker="Reviews"
+            title="Customer reviews"
+            copy="Trusted by industrial buyers, contractors and businesses for practical product guidance and dependable supply support."
+          />
+          <div className="review-panel card card-pad">
+            <div>
+              <span className="tag">Google Reviews</span>
+              <h3>5-star Google-rated business</h3>
+              <p>See customer feedback for Vidyut Enterprise or share your own experience.</p>
+            </div>
+            <a
+              href="https://g.page/r/CVh69S0mATSAEAI/review"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button"
+            >
+              View and Write Reviews
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="section alt">
         <div className="container grid two">
-          <section className="section">
-  <div className="container">
-    <div className="section-heading">
-      <h2>Customer Reviews</h2>
-      <p>
-        Trusted by industries, contractors and businesses across India.
-      </p>
-    </div>
-
-    <div className="card" style={{ textAlign: "center", padding: "32px" }}>
-      <h3>⭐⭐⭐⭐⭐ Rated on Google</h3>
-
-      <p>
-        See what our customers say about Vidyut Enterprise and share your experience.
-      </p>
-
-      <div style={{ marginTop: "20px" }}>
-        <a
-          href="https://g.page/r/CVh69S0mATSAEAI/review"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="button"
-        >
-          View & Write Google Reviews
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-<div style={{ marginTop: "12px" }}>
-  <a
-    href="https://maps.app.goo.gl/B3FojcwWowp2v9Dz6"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="button"
-  >
-    Open Location in Google Maps
-  </a>
-</div>
           <div>
             <div className="section-kicker">Location</div>
             <h2 className="section-title">Visit or contact Vidyut Enterprise</h2>
             <p className="section-copy">{site.address}</p>
-            <p className="section-copy">Phone: {site.phone} | Email: {site.email}</p>
-            <Link className="button" href="/contact">
-              Contact Details
-            </Link>
+            <div className="contact-actions">
+              {site.phoneNumbers.map((phone) => (
+                <a className="button-secondary" href={`tel:${phone.replaceAll(" ", "")}`} key={phone}>
+                  <Phone size={18} /> {phone}
+                </a>
+              ))}
+              <a className="button-secondary" href={`mailto:${site.email}`}>
+                <Mail size={18} /> {site.email}
+              </a>
+              <a className="button-secondary" href={`https://wa.me/${site.whatsapp}`} target="_blank" rel="noopener noreferrer">
+                <MessageCircle size={18} /> WhatsApp
+              </a>
+              <a className="button" href={site.mapUrl} target="_blank" rel="noopener noreferrer">
+                <MapPin size={18} /> Open Google Maps
+              </a>
+            </div>
           </div>
-          <div className="map-placeholder">
-  <iframe
-    src="https://maps.google.com/maps?q=31-33-102/C,%20Sri%20Vishnu%20Plaza,%20Opp.%20Leela%20Mahal%20Theater,%20Dabagardens,%20Visakhapatnam&t=&z=15&ie=UTF8&iwloc=&output=embed"
-    width="100%"
-    height="450"
-    style={{ border: 0 }}
-    loading="lazy"
-    allowFullScreen
-  />
-</div>
+          <div className="map-embed">
+            <iframe
+              title="Vidyut Enterprise Google Maps location"
+              src={site.mapEmbedUrl}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <SectionHeading kicker="FAQ" title="Common questions" />
+          <div className="grid three">
+            {homeFaqs.map((faq) => (
+              <div className="card card-pad" key={faq.question}>
+                <h3 style={{ color: "var(--navy)" }}>{faq.question}</h3>
+                <p style={{ color: "var(--muted)", lineHeight: 1.65 }}>{faq.answer}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </main>
