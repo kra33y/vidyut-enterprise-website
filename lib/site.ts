@@ -41,6 +41,7 @@ export const navItems = [
   { label: "Projects", href: "/projects" },
   { label: "Gallery", href: "/gallery" },
   { label: "Downloads", href: "/downloads" },
+  { label: "Services", href: "/earthing-installation" },
   { label: "Contact", href: "/contact" }
 ];
 
