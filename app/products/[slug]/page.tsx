@@ -182,11 +182,19 @@ function ProductCategoryPage({ category }: { category: Category }) {
   );
 }
 
-
 function ProductDetailPage({ product }: { product: ProductDetail }) {
   const relatedProducts = featuredProducts.filter(
     (item) => item.category === product.category && item.title !== product.title
   );
+  const relatedDetailProducts = productPages
+    .filter((item) => item.category === product.category && item.slug !== product.slug)
+    .slice(0, 6);
+  const productPlanningParagraphs = [
+    `${product.title} procurement should be planned with the full site requirement in mind. Industrial buyers usually need more than a basic item name: rating, size, material, accessories, panel or equipment compatibility, delivery location and installation context all affect whether the final supply is useful at site.`,
+    `For ${product.category.toLowerCase()} enquiries, Vidyut Enterprise can help map the product to related requirements such as cables, glands, lugs, panels, earthing, lightning protection, cable trays, distribution boards or maintenance accessories. This reduces the risk of placing a partial order that later delays installation or commissioning.`,
+    `A good RFQ for ${product.title.toLowerCase()} should include BOQ details, quantities, preferred specifications, existing panel photos if replacement is involved, site address and the required timeline. Where the exact specification is unclear, the team can review the connected application and suggest what information is needed before quotation.`,
+    `The product page is designed for contractors, consultants, purchase teams and facility managers who want a practical buying path. It connects technical specifications with common applications, benefits, related products and the enquiry form so the visitor can move from research to quotation without searching across disconnected pages.`
+  ];
 
   return (
     <main>
@@ -267,6 +275,15 @@ function ProductDetailPage({ product }: { product: ProductDetail }) {
       </section>
 
       <section className="section">
+        <div className="container article-prose">
+          <SectionHeading kicker="Procurement Guidance" title={`How to plan ${product.title.toLowerCase()} supply`} />
+          {productPlanningParagraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
         <div className="container">
           <SectionHeading kicker="FAQ" title={`${product.title} questions`} />
           <div className="grid two">
@@ -293,6 +310,21 @@ function ProductDetailPage({ product }: { product: ProductDetail }) {
         </section>
       ) : null}
 
+      {relatedDetailProducts.length ? (
+        <section className="section alt">
+          <div className="container">
+            <SectionHeading kicker="Related Products" title="More products in this category" />
+            <div className="category-nav">
+              {relatedDetailProducts.map((item) => (
+                <Link href={`/products/${item.slug}`} key={item.slug}>
+                  {item.title}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       <section className="section">
         <div className="container grid two">
           <div>
@@ -305,6 +337,12 @@ function ProductDetailPage({ product }: { product: ProductDetail }) {
           <div className="card card-pad">
             <LeadForm type="product" />
           </div>
+        </div>
+      </section>
+
+      <section className="section alt">
+        <div className="container">
+          <ConversionPanel title={`Request ${product.title.toLowerCase()} quote support`} />
         </div>
       </section>
     </main>

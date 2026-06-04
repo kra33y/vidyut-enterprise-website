@@ -528,7 +528,7 @@ export const servicePages: ServiceLandingPage[] = [
   }
 ].map((page) => ({ ...page, industries: page.industries.length ? page.industries : commonIndustries }));
 
-export const localSeoPages: LocalSeoPage[] = [
+const baseLocalSeoPages: LocalSeoPage[] = [
   {
     slug: "earthing-installation-visakhapatnam",
     title: "Earthing Installation in Visakhapatnam",
@@ -710,6 +710,83 @@ export const localSeoPages: LocalSeoPage[] = [
     ]
   }
 ];
+
+export const cityServiceLocations = [
+  { slug: "vijayawada", name: "Vijayawada", note: "commercial buildings, warehouses, transport corridors and industrial utility projects around Krishna district" },
+  { slug: "kakinada", name: "Kakinada", note: "port-linked industries, process plants, commercial facilities and coastal electrical infrastructure" },
+  { slug: "rajahmundry", name: "Rajahmundry", note: "commercial sites, manufacturing units, institutional buildings and Godavari-region utility projects" },
+  { slug: "tirupati", name: "Tirupati", note: "commercial buildings, institutional facilities, hospitality sites and industrial electrical maintenance needs" },
+  { slug: "guntur", name: "Guntur", note: "warehouses, commercial developments, agro-industrial facilities and electrical upgrade projects" },
+  { slug: "nellore", name: "Nellore", note: "industrial estates, commercial buildings, port-influenced projects and utility infrastructure" },
+  { slug: "vizianagaram", name: "Vizianagaram", note: "factories, warehouses, commercial sites and North Andhra electrical infrastructure projects" },
+  { slug: "srikakulam", name: "Srikakulam", note: "industrial facilities, institutional buildings, coastal sites and maintenance-focused electrical projects" },
+  { slug: "kurnool", name: "Kurnool", note: "commercial buildings, industrial utilities, solar-linked sites and regional infrastructure projects" },
+  { slug: "anantapur", name: "Anantapur", note: "industrial facilities, solar projects, commercial sites and dry-soil earthing requirements" }
+];
+
+const cityServiceTemplates = [
+  {
+    prefix: "earthing-installation",
+    service: "Earthing Installation",
+    focus: ["Chemical earthing pits", "Copper bonded rods", "GI and copper strip bonding", "Earth pit chambers", "Resistance testing"],
+    baseLink: { label: "Chemical Earthing Installation", href: "/services/chemical-earthing-installation" },
+    product: productLinks.chemicalEarthing,
+    article: articleLinks.pitGuide
+  },
+  {
+    prefix: "lightning-protection",
+    service: "Lightning Protection Installation",
+    focus: ["ESE lightning arrestors", "Masts and base plates", "Down conductor routing", "Test links", "Lightning earthing"],
+    baseLink: { label: "Lightning Protection System Installation", href: "/services/lightning-protection-system-installation" },
+    product: productLinks.lightning,
+    article: articleLinks.eseGuide
+  },
+  {
+    prefix: "electrical-contractor",
+    service: "Electrical Contractor Services",
+    focus: ["Industrial electrical contracting", "Cable tray support", "Switchgear and panel products", "BOQ review", "Material coordination"],
+    baseLink: { label: "Industrial Electrical Contracting", href: "/services/industrial-electrical-contracting" },
+    product: { label: "Electrical Switchgear Products", href: "/products/electrical-switchgear" },
+    article: articleLinks.cableTray
+  }
+];
+
+export const phaseTwoLocalSeoPages: LocalSeoPage[] = cityServiceLocations.flatMap((city) =>
+  cityServiceTemplates.map((template) => ({
+    slug: `${template.prefix}-${city.slug}`,
+    title: `${template.service} in ${city.name}`,
+    metaDescription: `${template.service} in ${city.name} for industrial, commercial and infrastructure projects with Vidyut Enterprise product supply, site support and RFQ guidance.`,
+    service: template.service,
+    location: city.name,
+    hero: `${template.service} in ${city.name} is planned for serious industrial and commercial buyers who need practical support, dependable material supply and clear coordination from enquiry to quotation.`,
+    serviceArea: `Vidyut Enterprise supports ${city.name} requirements connected to ${city.note}. The service can be coordinated from Visakhapatnam with BOQ review, product mapping, site visit planning, accessory selection and dispatch support across Andhra Pradesh.`,
+    industrialFocus: template.focus,
+    internalLinks: [
+      template.baseLink,
+      template.product,
+      template.article,
+      { label: `${city.name} Location Hub`, href: `/locations/${city.slug}` },
+      { label: "Request Quote", href: "/request-quote" },
+      { label: "Contact Vidyut Enterprise", href: "/contact" }
+    ],
+    faqs: [
+      {
+        question: `Do you support ${template.service.toLowerCase()} in ${city.name}?`,
+        answer: `Yes. Vidyut Enterprise can support ${template.service.toLowerCase()} requirements in ${city.name} based on site details, BOQ, material list, delivery location and project scope.`
+      },
+      {
+        question: `Can you supply products for ${city.name} projects?`,
+        answer: "Yes. Relevant earthing, lightning protection, switchgear, cable accessories, copper, GI and cable management products can be supplied as per RFQ."
+      },
+      {
+        question: "What details should I share for a faster quotation?",
+        answer: "Share product names, quantities, drawings, old test readings if any, site photos, required delivery location and project timeline."
+      }
+    ]
+  }))
+);
+
+export const localSeoPages: LocalSeoPage[] = [...baseLocalSeoPages, ...phaseTwoLocalSeoPages];
 
 export const projectCaseStudies: ProjectCaseStudy[] = [
   {
@@ -918,6 +995,7 @@ export const knowledgeArticles: KnowledgeArticle[] = articleTitles.map(([slug, t
 export const allLeadGenRoutes = {
   serviceRoutes: servicePages.map((page) => `/services/${page.slug}`),
   localRoutes: localSeoPages.map((page) => `/${page.slug}`),
+  locationHubRoutes: ["/locations", ...cityServiceLocations.map((city) => `/locations/${city.slug}`)],
   projectRoutes: projectCaseStudies.map((page) => `/projects/${page.slug}`),
   articleRoutes: knowledgeArticles.map((page) => `/blog/${page.slug}`)
 };

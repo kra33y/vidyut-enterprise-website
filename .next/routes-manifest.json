@@ -28,6 +28,14 @@
       "namedRegex": "^/blog/(?<nxtPslug>[^/]+?)(?:/)?$"
     },
     {
+      "page": "/locations/[city]",
+      "regex": "^/locations/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPcity": "nxtPcity"
+      },
+      "namedRegex": "^/locations/(?<nxtPcity>[^/]+?)(?:/)?$"
+    },
+    {
       "page": "/products/[slug]",
       "regex": "^/products/([^/]+?)(?:/)?$",
       "routeKeys": {
@@ -120,6 +128,12 @@
       "regex": "^/industries(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/industries(?:/)?$"
+    },
+    {
+      "page": "/locations",
+      "regex": "^/locations(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/locations(?:/)?$"
     },
     {
       "page": "/products",

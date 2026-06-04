@@ -115,6 +115,38 @@ export const categories = [
       "Raceway Systems",
       "Cable Tray Accessories"
     ]
+  },
+  {
+    slug: "electrical-switchgear",
+    title: "Electrical Switchgear & Industrial Electrical Products",
+    image: "/images/products/cable-trays-accessories.png",
+    summary:
+      "Supply of industrial electrical products, switchgear, protection devices, cables, cable accessories and electrical infrastructure components for commercial and industrial projects.",
+    products: [
+      "MCB",
+      "MCCB",
+      "ACB",
+      "VCB",
+      "Changeover Switches",
+      "Isolators",
+      "Contactors",
+      "Relays",
+      "Control Panels",
+      "Distribution Boards",
+      "LT Panels",
+      "HT Panels",
+      "Power Cables",
+      "Control Cables",
+      "Instrumentation Cables",
+      "Cable Glands",
+      "Cable Lugs",
+      "Cable Jointing Kits",
+      "Junction Boxes",
+      "Push Buttons",
+      "Selector Switches",
+      "Indicator Lamps",
+      "Industrial Electrical Accessories"
+    ]
   }
 ];
 
@@ -410,6 +442,216 @@ export const productPages = [
       {
         question: "Which material is available?",
         answer: "FRP, cast iron and RCC options are available depending on site duty and budget."
+      }
+    ]
+  },
+  {
+    slug: "mcb",
+    title: "MCB",
+    category: "Electrical Switchgear & Industrial Electrical Products",
+    image: "/images/products/cable-trays-accessories.png",
+    summary:
+      "Miniature circuit breakers for electrical distribution boards, commercial panels, industrial control rooms and final circuit protection.",
+    description:
+      "MCBs are essential protection devices used to isolate overloaded or short-circuit final circuits in distribution boards, control rooms, office electrical systems, factory utilities and maintenance panels. Vidyut Enterprise supports MCB enquiries where buyers need product selection, pole configuration, rating guidance, quantity planning and compatibility with boards, panels, cables and accessories. For industrial procurement, the MCB should not be treated as a standalone line item. The rating, breaking capacity, curve, phase arrangement, enclosure type, upstream protection and downstream load all influence selection. Contractors and purchase teams can share BOQs, panel schedules, photos or old device details so the correct MCB family, quantity and accessory support can be quoted. MCB supply can also be coordinated with distribution boards, cable lugs, glands, control cables, junction boxes and related industrial electrical products.",
+    features: [
+      "Final circuit overload and short-circuit protection",
+      "Single-pole, double-pole, triple-pole and four-pole requirement support",
+      "Useful for distribution boards and control panels",
+      "Can be mapped from BOQ, old panel photos or load schedules",
+      "Supply support with related cables, lugs, glands and accessories"
+    ],
+    specs: {
+      Product: "Miniature Circuit Breaker",
+      Ratings: "Project and BOQ specific ampere ratings",
+      Poles: "SP, DP, TP and FP options as required",
+      Applications: "DBs, control panels, lighting and small power circuits",
+      Support: "BOQ review, quantity supply and accessory coordination"
+    },
+    applications: ["Distribution boards", "Control panels", "Commercial buildings", "Factory utilities", "Maintenance panels"],
+    faqs: [
+      {
+        question: "Can you supply MCBs for distribution boards?",
+        answer: "Yes. MCBs can be supplied for DBs, control panels and commercial or industrial electrical requirements."
+      },
+      {
+        question: "What details are needed for an MCB quote?",
+        answer: "Share ampere rating, pole type, quantity, brand preference if any, panel schedule and delivery location."
+      }
+    ]
+  },
+  {
+    slug: "mccb",
+    title: "MCCB",
+    category: "Electrical Switchgear & Industrial Electrical Products",
+    image: "/images/products/cable-trays-accessories.png",
+    summary:
+      "Moulded case circuit breakers for industrial feeder protection, LT panels, distribution systems and heavy electrical loads.",
+    description:
+      "MCCBs are used in industrial and commercial electrical systems where higher current protection, feeder isolation and dependable switching are required. They are commonly specified for LT panels, incomer and outgoing feeders, pump panels, motor feeders, plant utility panels, commercial distribution systems and electrical upgrade projects. Vidyut Enterprise supports MCCB supply by helping buyers align rating, breaking capacity, poles, accessories, enclosure needs and panel application with the actual site requirement. A correct MCCB enquiry should include load details, panel schedule, short-circuit expectation if available, quantity, accessories such as shunt trip or auxiliary contact if needed, and installation environment. MCCBs can be supplied along with cable lugs, power cables, cable glands, distribution boards, control panels and other electrical infrastructure materials.",
+    features: [
+      "Industrial feeder and panel protection support",
+      "Useful for incomer, outgoing and motor feeder applications",
+      "Rating and breaking-capacity selection based on BOQ",
+      "Accessory support such as auxiliary contact or shunt trip when required",
+      "Can be supplied with cables, lugs, glands and panel accessories"
+    ],
+    specs: {
+      Product: "Moulded Case Circuit Breaker",
+      Ratings: "As per feeder load and BOQ",
+      Poles: "TP and FP commonly requested",
+      Applications: "LT panels, feeders, pump panels and distribution systems",
+      Support: "Technical selection and procurement coordination"
+    },
+    applications: ["LT panels", "Industrial feeders", "Pump panels", "Commercial distribution", "Factory electrical rooms"],
+    faqs: [
+      {
+        question: "Can you help select MCCB rating?",
+        answer: "Yes. Share load details, panel schedule, pole requirement and BOQ so the suitable rating can be reviewed."
+      },
+      {
+        question: "Do you supply MCCB accessories?",
+        answer: "Accessory requirements such as auxiliary contacts or shunt trips can be coordinated based on the project specification."
+      }
+    ]
+  },
+  {
+    slug: "power-cables",
+    title: "Power Cables",
+    category: "Electrical Switchgear & Industrial Electrical Products",
+    image: "/images/products/cable-trays-accessories.png",
+    summary:
+      "Power cables for industrial electrical distribution, panels, machinery, utility systems and commercial infrastructure projects.",
+    description:
+      "Power cables are a core procurement item for factories, substations, commercial buildings, warehouses, utility rooms, solar projects and industrial electrical upgrades. Cable selection depends on voltage grade, conductor material, insulation, armour, core count, current requirement, routing method, environmental exposure, gland and lug compatibility and installation distance. Vidyut Enterprise supports power cable enquiries by helping buyers convert BOQ or site requirements into a supply-ready list. Power cable supply can be coordinated with cable glands, cable lugs, cable trays, junction boxes, panels, earthing material and installation accessories so procurement teams avoid missing connected items. Contractors can share drawings, cable schedules, route length, cable tray requirements and panel details for faster quotation support.",
+    features: [
+      "Supply support for industrial and commercial power distribution",
+      "Cable schedule and BOQ-based quantity planning",
+      "Coordination with glands, lugs, trays and panels",
+      "Suitable for factories, substations and commercial buildings",
+      "Useful for new projects, upgrades and maintenance replacement"
+    ],
+    specs: {
+      Product: "Power Cable",
+      Voltage: "As per project and BOQ",
+      Conductor: "Copper or aluminium as specified",
+      Accessories: "Cable glands, lugs, trays and jointing kits",
+      Support: "Cable schedule review and RFQ coordination"
+    },
+    applications: ["LT distribution", "Panels", "Machinery feeders", "Commercial buildings", "Industrial upgrades"],
+    faqs: [
+      {
+        question: "What details are needed for power cable supply?",
+        answer: "Share cable size, core count, conductor material, voltage grade, quantity or route length and delivery location."
+      },
+      {
+        question: "Can cables be supplied with glands and lugs?",
+        answer: "Yes. Matching cable glands, cable lugs and related accessories can be included in the quotation."
+      }
+    ]
+  },
+  {
+    slug: "cable-glands",
+    title: "Cable Glands",
+    category: "Electrical Switchgear & Industrial Electrical Products",
+    image: "/images/products/cable-trays-accessories.png",
+    summary:
+      "Cable glands for industrial cable termination, panel entry, junction boxes, distribution boards and electrical equipment protection.",
+    description:
+      "Cable glands are small but critical electrical accessories used to secure cable entry, protect terminations, maintain enclosure integrity and support safe installation in panels, junction boxes, machines and distribution systems. In industrial procurement, cable glands must match cable size, armour type, enclosure requirement, installation environment and gland plate arrangement. Vidyut Enterprise supports cable gland enquiries as part of power cable, control cable, panel and junction box supply packages. Buyers can share cable size, cable type, armour detail, quantity, panel or enclosure information and site environment. Cable glands can be supplied with cable lugs, cables, junction boxes, control panels and other termination accessories for cleaner project procurement.",
+    features: [
+      "Cable termination and panel entry support",
+      "Useful for power, control and instrumentation cables",
+      "Can be matched to cable size and armour requirement",
+      "Supports junction boxes, DBs, LT panels and equipment enclosures",
+      "Supply coordination with cable lugs and cable schedules"
+    ],
+    specs: {
+      Product: "Cable Gland",
+      Types: "Project-specific gland type and size",
+      Use: "Cable entry, termination and enclosure support",
+      Accessories: "Lugs, cables, junction boxes and panels",
+      Support: "Cable-size based gland mapping"
+    },
+    applications: ["Control panels", "Distribution boards", "Junction boxes", "Industrial machines", "Cable terminations"],
+    faqs: [
+      {
+        question: "How do I select cable gland size?",
+        answer: "Cable gland size depends on cable size, cable type, armour detail and enclosure entry requirement."
+      },
+      {
+        question: "Can you supply glands with lugs?",
+        answer: "Yes. Cable glands and cable lugs can be quoted together for termination packages."
+      }
+    ]
+  },
+  {
+    slug: "cable-lugs",
+    title: "Cable Lugs",
+    category: "Electrical Switchgear & Industrial Electrical Products",
+    image: "/images/products/cable-trays-accessories.png",
+    summary:
+      "Cable lugs for copper and aluminium cable termination in panels, distribution boards, machinery and industrial electrical systems.",
+    description:
+      "Cable lugs are used to create dependable electrical terminations between cables and equipment terminals, busbars, panels, distribution boards and machinery. Proper lug selection depends on conductor material, cable size, termination hole size, current requirement, crimping method and installation environment. Vidyut Enterprise supports cable lug supply for industrial electrical projects, maintenance teams, panel builders and contractors. Cable lugs can be coordinated with power cables, control cables, cable glands, panels, switchgear and earthing conductors. A strong RFQ should include cable size, copper or aluminium conductor, lug type, hole size if known, quantity and delivery location. This prevents mismatched accessories and reduces termination delays at site.",
+    features: [
+      "Copper and aluminium cable termination support",
+      "Useful for panels, DBs, busbars and equipment terminals",
+      "Can be mapped to cable size and hole requirement",
+      "Supports maintenance, panel building and project supply",
+      "Can be quoted with cables, glands and control panels"
+    ],
+    specs: {
+      Product: "Cable Lug",
+      Material: "Copper or aluminium as specified",
+      Sizes: "As per cable schedule and BOQ",
+      Use: "Electrical cable termination",
+      Support: "Cable-size and quantity mapping"
+    },
+    applications: ["Panel terminations", "Distribution boards", "Busbars", "Industrial equipment", "Maintenance replacement"],
+    faqs: [
+      {
+        question: "What details are needed for cable lug supply?",
+        answer: "Share cable size, conductor material, hole size if available, lug type and quantity."
+      },
+      {
+        question: "Can lugs be supplied with power cables?",
+        answer: "Yes. Cable lugs, glands and cables can be supplied together for project requirements."
+      }
+    ]
+  },
+  {
+    slug: "control-panels",
+    title: "Control Panels",
+    category: "Electrical Switchgear & Industrial Electrical Products",
+    image: "/images/products/cable-trays-accessories.png",
+    summary:
+      "Control panel supply and support for industrial automation, machinery control, pump systems, utilities and electrical infrastructure projects.",
+    description:
+      "Control panels bring together switchgear, contactors, relays, push buttons, selector switches, indicator lamps, control wiring, protection devices and enclosure planning for machinery and industrial utilities. Vidyut Enterprise supports control panel related enquiries where buyers need component supply, accessory coordination, BOQ support or project procurement for electrical infrastructure. Control panel requirements should be reviewed with load type, control function, number of feeders, protection device needs, cable entry, enclosure location, maintenance access and related field devices in mind. Supply support can include MCBs, MCCBs, contactors, relays, push buttons, selector switches, indicator lamps, cable glands, cable lugs, control cables and junction boxes. This helps contractors and purchase teams create a complete list instead of ordering partial components.",
+    features: [
+      "Industrial panel component supply support",
+      "MCB, MCCB, contactor, relay and control accessory coordination",
+      "Useful for machinery, pumps, utilities and factory controls",
+      "BOQ and component-list review support",
+      "Can be supplied with control cables, glands, lugs and junction boxes"
+    ],
+    specs: {
+      Product: "Control Panel Components and Support",
+      Components: "Switchgear, relays, contactors, push buttons and indicators",
+      Cables: "Control cables and termination accessories",
+      Use: "Industrial automation, machinery and utility controls",
+      Support: "BOQ review and product coordination"
+    },
+    applications: ["Machinery control", "Pump panels", "Factory utilities", "Automation panels", "Electrical maintenance"],
+    faqs: [
+      {
+        question: "Do you supply control panel components?",
+        answer: "Yes. Switchgear, relays, contactors, indicators, push buttons, cables, glands and lugs can be coordinated."
+      },
+      {
+        question: "Can you review a control panel BOQ?",
+        answer: "Yes. Share the BOQ, component list, panel schedule or old panel photos for product mapping."
       }
     ]
   }
