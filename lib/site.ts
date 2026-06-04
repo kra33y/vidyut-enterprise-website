@@ -119,7 +119,7 @@ export const categories = [
   {
     slug: "electrical-switchgear",
     title: "Electrical Switchgear & Industrial Electrical Products",
-    image: "/images/products/cable-trays-accessories.png",
+    image: "/images/products/electricals.png",
     summary:
       "Supply of industrial electrical products, switchgear, protection devices, cables, cable accessories and electrical infrastructure components for commercial and industrial projects.",
     products: [
