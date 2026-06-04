@@ -3,11 +3,6 @@ import { allLeadGenRoutes } from "@/lib/lead-gen-content";
 import { categories, productPages, site } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-06-03");
-
-import { categories, productPages, site } from "@/lib/site";
-
-export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date("2026-06-04");
   const staticRoutes = [
     "",
