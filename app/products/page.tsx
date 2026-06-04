@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, BadgeCheck } from "lucide-react";
+import { ConversionPanel } from "@/components/ConversionPanel";
 import { JsonLd } from "@/components/JsonLd";
 import { ProductCard } from "@/components/ProductCard";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -93,6 +94,12 @@ export default function ProductsPage() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section alt">
+        <div className="container">
+          <ConversionPanel title="Need product selection or BOQ support?" />
         </div>
       </section>
     </main>

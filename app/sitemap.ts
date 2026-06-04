@@ -1,8 +1,14 @@
 import type { MetadataRoute } from "next";
+import { allLeadGenRoutes } from "@/lib/lead-gen-content";
 import { categories, productPages, site } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date("2026-06-03");
+
+import { categories, productPages, site } from "@/lib/site";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const lastModified = new Date("2026-06-04");
   const staticRoutes = [
     "",
     "/about",
@@ -35,6 +41,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "weekly" as const,
       priority: 0.95
+    })),
+    ...allLeadGenRoutes.serviceRoutes.map((route) => ({
+      url: `${site.url}${route}`,
+      lastModified,
+      changeFrequency: "weekly" as const,
+      priority: 0.92
+    })),
+    ...allLeadGenRoutes.localRoutes.map((route) => ({
+      url: `${site.url}${route}`,
+      lastModified,
+      changeFrequency: "weekly" as const,
+      priority: 0.9
+    })),
+    ...allLeadGenRoutes.projectRoutes.map((route) => ({
+      url: `${site.url}${route}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.84
+    })),
+    ...allLeadGenRoutes.articleRoutes.map((route) => ({
+      url: `${site.url}${route}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.78
     }))
   ];
 }

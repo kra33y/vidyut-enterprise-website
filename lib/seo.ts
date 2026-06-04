@@ -148,3 +148,56 @@ export function serviceJsonLd(service: { name: string; description: string; path
     url: `${site.url}${service.path}`
   };
 }
+
+export function articleJsonLd(article: {
+  title: string;
+  metaDescription: string;
+  slug: string;
+  date: string;
+  cluster: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.metaDescription,
+    datePublished: article.date,
+    dateModified: article.date,
+    articleSection: article.cluster,
+    author: {
+      "@type": "Organization",
+      name: site.name
+    },
+    publisher: {
+      "@type": "Organization",
+      name: site.name,
+      logo: {
+        "@type": "ImageObject",
+        url: `${site.url}/images/brand/vidyut-enterprise-logo.png`
+      }
+    },
+    mainEntityOfPage: `${site.url}/blog/${article.slug}`
+  };
+}
+
+export function projectJsonLd(project: {
+  title: string;
+  metaDescription: string;
+  slug: string;
+  industry: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: project.title,
+    description: project.metaDescription,
+    about: project.industry,
+    url: `${site.url}/projects/${project.slug}`,
+    provider: {
+      "@type": "Organization",
+      name: site.name,
+      telephone: site.phoneNumbers,
+      email: site.email
+    }
+  };
+}

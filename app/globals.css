@@ -537,7 +537,7 @@ textarea {
 }
 
 .map-embed {
-  height: 420px;
+  min-height: 420px;
   border: 1px solid var(--line);
   border-radius: 8px;
   overflow: hidden;
@@ -576,6 +576,100 @@ textarea {
   min-width: 178px;
 }
 
+.article-prose {
+  max-width: 920px;
+}
+
+.article-prose p {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.step-card {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+}
+
+.step-card strong {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: var(--navy);
+  color: white;
+}
+
+.step-card span {
+  color: #334155;
+  line-height: 1.6;
+}
+
+.link-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.link-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--navy);
+  font-weight: 800;
+  background: #f8fafc;
+}
+
+.link-list a:hover {
+  border-color: var(--electric);
+  color: var(--electric);
+}
+
+.cta-panel {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 26px;
+  align-items: center;
+  padding: 34px;
+  border-radius: 8px;
+  background: linear-gradient(120deg, var(--navy), #0b4e91);
+  color: white;
+}
+
+.cta-panel h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.08;
+}
+
+.cta-panel p {
+  color: #dbeafe;
+  line-height: 1.7;
+}
+
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cta-actions .button-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
 @media (max-width: 980px) {
   .nav-inner {
     flex-wrap: wrap;
@@ -612,6 +706,7 @@ textarea {
   .grid.four,
   .footer-grid,
   .download-panel,
+  .cta-panel,
   .review-panel,
   .contact-grid,
   .quote-grid {

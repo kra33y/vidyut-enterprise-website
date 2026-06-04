@@ -1,71 +1,72 @@
 import Link from "next/link";
-import { Building2, CheckCircle2, Factory, Sun, Zap } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
+import { ConversionPanel } from "@/components/ConversionPanel";
+import { JsonLd } from "@/components/JsonLd";
 import { SectionHeading } from "@/components/SectionHeading";
-import { pageMetadata } from "@/lib/seo";
+import { projectCaseStudies } from "@/lib/lead-gen-content";
+import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata(
-  "Projects",
-  "Project supply capabilities for earthing, lightning protection and industrial electrical infrastructure.",
+  "Industrial Electrical Project Case Studies",
+  "Industrial earthing, lightning protection, cable tray and electrical upgrade case studies from Vidyut Enterprise.",
   "/projects"
 );
 
 export default function ProjectsPage() {
-  const projects = [
-    { title: "Industrial Plant Earthing Package", icon: Factory, scope: "Electrodes, backfill compound, earth pit covers, copper strips and accessories." },
-    { title: "Commercial Building Lightning Protection", icon: Building2, scope: "ESE arrestor, air terminal, down conductor, clamps, test links and mounting accessories." },
-    { title: "Solar Project Grounding Material", icon: Sun, scope: "GI and copper earthing material, rods, plates, flats, conductors and chambers." },
-    { title: "Cable Tray Supply Package", icon: Zap, scope: "Perforated trays, ladder trays, bends, reducers, tees, brackets, rods and fasteners." }
-  ];
-
   return (
     <main>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Projects", path: "/projects" }
+        ])}
+      />
+
       <section className="page-hero">
         <div className="container">
           <div className="breadcrumb">Home / Projects</div>
-          <h1>Project supply and contractor-oriented support</h1>
+          <h1>Industrial electrical project case studies</h1>
           <p className="lead">
-            The website positions Vidyut Enterprise for enquiries from contractors, consultants, purchase teams and facility
-            owners.
+            Realistic project examples for earthing, lightning protection, industrial electrical upgrades and grounding
+            material supply.
           </p>
         </div>
       </section>
+
       <section className="section">
         <div className="container">
-          <SectionHeading kicker="Project Scope" title="Typical project packages" />
-          <div className="grid two">
-            {projects.map((project) => {
-              const Icon = project.icon;
-              return (
-                <article className="card card-pad" key={project.title}>
-                  <span className="icon-box">
-                    <Icon size={22} />
-                  </span>
-                  <h3 style={{ color: "var(--navy)", marginTop: 18 }}>{project.title}</h3>
-                  <p style={{ color: "var(--muted)", lineHeight: 1.65 }}>{project.scope}</p>
-                </article>
-              );
-            })}
+          <SectionHeading
+            kicker="Case Studies"
+            title="Project experience and enquiry-ready scopes"
+            copy="Each case study shows typical challenges, material planning, solution approach and enquiry points for industrial buyers."
+          />
+          <div className="grid three">
+            {projectCaseStudies.map((project) => (
+              <article className="card card-pad" key={project.slug}>
+                <span className="tag">{project.industry}</span>
+                <h2 style={{ color: "var(--navy)", marginTop: 16, fontSize: 26 }}>{project.title}</h2>
+                <p style={{ color: "var(--muted)", lineHeight: 1.65 }}>{project.overview}</p>
+                <ul className="feature-list">
+                  {project.scope.slice(0, 3).map((item) => (
+                    <li key={item}>
+                      <CheckCircle2 size={18} color="var(--electric)" /> {item}
+                    </li>
+                  ))}
+                </ul>
+                <div className="card-actions">
+                  <Link className="button-secondary" href={`/projects/${project.slug}`}>
+                    View Case Study
+                  </Link>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
+
       <section className="section alt">
-        <div className="container grid two">
-          <div>
-            <div className="section-kicker">Process</div>
-            <h2 className="section-title">Simple RFQ workflow</h2>
-            <ul className="feature-list">
-              {["Share BOQ or product list", "Confirm material grade, quantity and delivery location", "Receive product-matched quote", "Coordinate dispatch and documentation"].map((item) => (
-                <li key={item}>
-                  <CheckCircle2 size={20} color="var(--electric)" /> {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="card card-pad">
-            <h3 style={{ color: "var(--navy)", fontSize: 28 }}>Have a project requirement?</h3>
-            <p style={{ color: "var(--muted)", lineHeight: 1.65 }}>Send drawings, quantities or product names and request a project quote.</p>
-            <Link className="button" href="/request-quote">Request Quote</Link>
-          </div>
+        <div className="container">
+          <ConversionPanel title="Planning an industrial electrical or earthing project?" />
         </div>
       </section>
     </main>

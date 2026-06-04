@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { ClipboardCheck, ShieldCheck, Wrench } from "lucide-react";
+import { ConversionPanel } from "@/components/ConversionPanel";
 import { JsonLd } from "@/components/JsonLd";
 import { LeadForm } from "@/components/LeadForm";
 import { SectionHeading } from "@/components/SectionHeading";
+import { servicePages } from "@/lib/lead-gen-content";
 import { site } from "@/lib/site";
 import { breadcrumbJsonLd, faqJsonLd, pageMetadata, serviceJsonLd } from "@/lib/seo";
 
@@ -157,6 +159,68 @@ export default function EarthingInstallationPage() {
 
       <section className="section alt">
         <div className="container">
+          <SectionHeading
+            kicker="Service Landing Pages"
+            title="Explore dedicated service support"
+            copy="Detailed pages for chemical earthing, lightning protection, testing, consultancy, contracting, factory and substation requirements."
+          />
+          <div className="category-nav">
+            {servicePages.map((page) => (
+              <Link href={`/services/${page.slug}`} key={page.slug}>
+                {page.title}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container grid two">
+          <div>
+            <div className="section-kicker">Scope</div>
+            <h2 className="section-title">Built for site-ready execution</h2>
+            <ul className="feature-list">
+              <li>
+                <ShieldCheck size={20} color="var(--electric)" /> Site survey, BOQ review and product selection.
+              </li>
+              <li>
+                <ShieldCheck size={20} color="var(--electric)" /> Earthing electrode, backfill compound and chamber supply.
+              </li>
+              <li>
+                <ShieldCheck size={20} color="var(--electric)" /> Earth resistance testing and inspection support.
+              </li>
+              <li>
+                <ShieldCheck size={20} color="var(--electric)" /> Lightning protection and down conductor coordination.
+              </li>
+            </ul>
+          </div>
+          <div className="card card-pad">
+            <h3 style={{ color: "var(--navy)", fontSize: 28 }}>Send site details</h3>
+            <p style={{ color: "var(--muted)", lineHeight: 1.65 }}>
+              Share your site location, number of pits, soil condition, drawings or BOQ for a suitable response.
+            </p>
+            <LeadForm type="service" />
+          </div>
+        </div>
+      </section>
+
+      <section className="section alt">
+        <div className="container">
+          <SectionHeading kicker="Industries" title="Industries served" />
+          <div className="grid three">
+            {["Manufacturing plants", "Commercial buildings", "Hospitals", "Data centers", "Telecom sites", "Power projects"].map(
+              (industry) => (
+                <div className="card card-pad" key={industry}>
+                  <h3 style={{ color: "var(--navy)" }}>{industry}</h3>
+                </div>
+              )
+            )}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
           <SectionHeading kicker="FAQ" title="Earthing service questions" />
           <div className="grid three">
             {serviceFaqs.map((faq) => (
@@ -166,6 +230,12 @@ export default function EarthingInstallationPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section alt">
+        <div className="container">
+          <ConversionPanel title="Request earthing, testing or lightning protection support" />
         </div>
       </section>
     </main>

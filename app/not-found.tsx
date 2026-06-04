@@ -7,7 +7,7 @@ export default function NotFound() {
         <div className="container">
           <h1>Page not found</h1>
           <p className="lead">The page you are looking for is unavailable.</p>
-          <Link className="button" href="/home">
+          <Link className="button" href="/">
             Return Home
           </Link>
         </div>
