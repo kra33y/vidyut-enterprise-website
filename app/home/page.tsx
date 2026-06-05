@@ -46,11 +46,10 @@ export default function HomePage() {
             <h1>
 Chemical Earthing, Grounding & Lightning Protection Solutions for Industrial Infrastructure
 </h1>
-            <p>
-              Vidyut Enterprise is a manufacturer, supplier, stockist, distributor and contractor for earthing systems,
-              lightning protection, copper products, GI products and cable management solutions.
-            </p>
-            <div className="hero-actions">
+              <p>
+  Vidyut Enterprise is a leading manufacturer and supplier of Chemical Earthing Electrodes, Copper Bonded Earthing Rods, Earthing Compounds, Lightning Protection Systems and Grounding Solutions for industrial, commercial and infrastructure projects across India.
+</p>
+                        <div className="hero-actions">
               <Link className="button" href="/request-quote">
                 Request Quote <ArrowRight size={18} />
               </Link>
