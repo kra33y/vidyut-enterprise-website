@@ -10,8 +10,8 @@ import { categories, downloads, featuredProducts, industries, site, trustItems, 
 import { faqJsonLd, pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata(
-  "Earthing Electrode, Lightning Arrestor & Electrical Supplier in Visakhapatnam",
-  "Vidyut Enterprise supplies earthing electrodes, lightning arrestors, copper products, GI products and cable trays for industrial projects in Visakhapatnam and across India."
+  "Chemical Earthing Electrode & Lightning Protection System Manufacturer India",
+  "Vidyut Enterprise is a leading manufacturer and supplier of chemical earthing electrodes, copper bonded earthing rods, earthing compounds, lightning protection systems and cable management solutions for industrial, commercial and infrastructure projects across India."
 );
 
 const homeFaqs = [
@@ -41,9 +41,11 @@ export default function HomePage() {
         <div className="container hero-grid">
           <div className="hero-copy">
             <span className="eyebrow">
-              <Zap size={16} /> Electrical & Earthing Solutions
+              <Zap size={16} /> Chemical Earthing • Grounding • Lightning Protection
             </span>
-            <h1>Industrial electrical products built for reliable site performance.</h1>
+            <h1>
+Chemical Earthing, Grounding & Lightning Protection Solutions for Industrial Infrastructure
+</h1>
             <p>
               Vidyut Enterprise is a manufacturer, supplier, stockist, distributor and contractor for earthing systems,
               lightning protection, copper products, GI products and cable management solutions.
@@ -83,7 +85,7 @@ export default function HomePage() {
           <SectionHeading
             kicker="Company"
             title="Trusted industrial supply and execution support"
-            copy="From product selection to site-ready procurement, Vidyut Enterprise supports contractors, factories, consultants and purchase teams with practical electrical infrastructure solutions."
+            copy="Vidyut Enterprise helps industries, contractors, consultants and infrastructure projects implement safe, maintenance-free earthing systems and lightning protection solutions that comply with modern electrical safety standards."
           />
           <div className="grid three">
             {trustItems.map((item, index) => {
@@ -108,8 +110,8 @@ export default function HomePage() {
         <div className="container">
           <SectionHeading
             kicker="Products"
-            title="Core product categories"
-            copy="Organized around high-demand industrial requirements: grounding, lightning safety, conductivity, galvanized supports and cable routing."
+            title="Earthing, Grounding & Lightning Protection Products"
+            copy="Comprehensive earthing and lightning protection products designed to improve electrical safety, reduce fault current risks and provide long-term grounding performance."
           />
           <div className="grid three">
             {categories.map((category) => (
@@ -177,7 +179,15 @@ export default function HomePage() {
         <div className="container grid two">
           <div>
             <div className="section-kicker">Why choose us</div>
-            <h2 className="section-title">Technical supply with dependable documentation</h2>
+            <h2>
+Earthing Contractor and Supplier in Visakhapatnam
+</h2>
+
+<p>
+Based in Visakhapatnam, Andhra Pradesh, Vidyut Enterprise supplies chemical earthing electrodes,
+lightning arresters, copper bonded rods and grounding materials to industries across Andhra Pradesh,
+Odisha, Telangana, Tamil Nadu and Karnataka.
+</p>
             <ul className="feature-list" style={{ marginTop: 26 }}>
               {whyChooseUs.map((item) => (
                 <li key={item}>
@@ -280,6 +290,27 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+<section>
+<h2>Chemical Earthing Electrode Manufacturer in India</h2>
+
+<p>
+Chemical earthing electrodes provide a low-resistance path for fault current discharge,
+ensuring equipment protection and personnel safety. Vidyut Enterprise manufactures and
+supplies maintenance-free chemical earthing systems for industrial plants, substations,
+telecom towers, commercial buildings and renewable energy projects.
+</p>
+
+<h3>Our Earthing Solutions</h3>
+
+<ul>
+<li>Copper Bonded Earthing Rods</li>
+<li>GI Earthing Electrodes</li>
+<li>Earthing Enhancement Compound</li>
+<li>Lightning Protection Systems</li>
+<li>Earth Pit Covers</li>
+<li>Earthing Accessories</li>
+</ul>
+</section>
 
       <section className="section">
         <div className="container">

@@ -18,9 +18,9 @@ import {
 export const site = {
   name: "Vidyut Enterprise",
   legalName: "VIDYUT ENTERPRISE",
-  tagline: "Electrical & Earthing Solutions for Industries",
-  description:
-    "Manufacturer, supplier, stockist, distributor and contractor for industrial electrical products, earthing systems, lightning protection and electrical infrastructure solutions in India.",
+  tagline: "Chemical Earthing, Grounding & Lightning Protection Solutions",
+    description:
+"Leading manufacturer and supplier of chemical earthing electrodes, copper bonded earthing rods, earthing compounds, lightning protection systems and grounding solutions for industrial infrastructure projects across India.",
   url: "https://vidyutenterprise.in",
 
   primaryPhone: "+91 76758 73689",
@@ -665,6 +665,10 @@ export const industries = [
   { title: "Data Centers", icon: ShieldCheck },
   { title: "Commercial Buildings", icon: Building2 },
   { title: "Warehouses", icon: Hammer },
+  { title: "Oil & Gas", icon: Factory },
+  { title: "Pharmaceutical Plants", icon: Factory },
+  { title: "Ports & Marine Infrastructure", icon: Globe2 },
+  { title: "Renewable Energy Projects", icon: Sun },
   { title: "Airports and Railways", icon: Landmark }
 ];
 
@@ -743,3 +747,8 @@ export const trustItems = [
   { title: "MSME Registered", value: site.msme, icon: ShieldCheck },
   { title: "Industrial Focus", value: "Earthing, lightning protection and electrical infrastructure", icon: Zap }
 ];
+{
+ title: "Earthing & Lightning Protection Specialist",
+ value: "Solutions for industrial, commercial and infrastructure projects",
+ icon: ShieldCheck
+}
