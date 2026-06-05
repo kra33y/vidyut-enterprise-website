@@ -745,10 +745,14 @@ export const blogPosts = [
 export const trustItems = [
   { title: "GST Registered", value: site.gst, icon: BadgeCheck },
   { title: "MSME Registered", value: site.msme, icon: ShieldCheck },
-  { title: "Industrial Focus", value: "Earthing, lightning protection and electrical infrastructure", icon: Zap }
+  {
+    title: "Industrial Focus",
+    value: "Earthing, lightning protection and electrical infrastructure",
+    icon: Zap
+  },
+  {
+    title: "Earthing & Lightning Protection Specialist",
+    value: "Solutions for industrial, commercial and infrastructure projects",
+    icon: ShieldCheck
+  }
 ];
-{
- title: "Earthing & Lightning Protection Specialist",
- value: "Solutions for industrial, commercial and infrastructure projects",
- icon: ShieldCheck
-}
